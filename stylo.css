@@ -1,0 +1,311 @@
+*{margin:0 padding:0}
+
+body{
+    background: #fffffa;
+}
+
+
+nav{
+    width: 100%;
+    overflow: hidden;
+    background:#008080;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+    overflow:hidden;
+
+}
+
+header .logo{
+    color: #f2f2f2;
+    font-size: 50px;
+    line-height: 200px;
+    float: left;
+}
+header nav{
+    float: right;
+    line-height: 2000px;
+}
+
+header nav a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+header nav a:hover{
+    background:  #F0B27A;
+    border-radius: 50px;
+}
+.header2{
+    position:fixed;
+    height: 15%;
+    width: 100%;
+    
+}
+
+.Bienvenida{
+    width: 60%;
+    height: 60%;
+    max-width: 1000px;
+    margin:auto;        
+    margin-top: 50px;
+    border-width:10px; 
+           
+}
+.cuerpo{
+        width: 15%;
+        height: 30%;
+        max-width: 1000px;
+        margin:auto;        
+        margin-top: 10%;
+        background-color: #f5f8f4;
+        border­radius: 100%;
+        overflow: hidden;
+        border-block-end-color: #008080;
+    }
+.boxContenedor {
+        width:225px;
+        height:200px;
+        overflow:scroll;
+    }
+.body{
+    margin: auto;
+    margin-top: 50px;
+    width: 900px;
+    height: 237px; 
+    display: visibility;
+}
+.opinion{
+    margin: auto;
+    margin-top: 2px;
+    width: 1000px;
+    height: 500px;
+}
+.autoridades{
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 500px;
+}
+.izquierdaop{
+    width: 300px;
+    height: 223px;    
+    float: left;    
+    
+}
+.centroop{
+    width: 300px;
+    height: 223px;    
+    float: left;    
+    
+}
+.derechaop{
+    width: 300px;
+    height: 223px;    
+    float: left; 
+      
+}
+.izquierda{
+    width: 300px;
+    height: 223px;    
+    float: left;
+    border-right:1px solid rgb(73, 71, 71);
+}
+.centro{
+    width: 300px;
+    height: 223px;   
+    float: left;
+    border-right:1px solid rgb(73, 71, 71);
+}
+.derecha{
+    width: 295px;
+    height: 300px;    
+    float: left;
+}
+.Educación{
+    margin: auto;
+    margin-top: 50px;
+    width: 900px;
+    height: 300px;        
+}
+.text{
+    width: 895px;
+    height: 300px;
+}
+
+.contactos{
+    width: 100%;
+    height: 20%;
+    max-width: 1000px;
+    margin:auto;        
+    margin-top: 9%;
+}  
+ 
+input {
+    
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    padding:0 9px 0 9px;
+ }
+
+.tabla{
+    margin-top: 100%;    
+    width: 100%;
+    background-color: rgb(241, 237, 237);
+    text-align: left;
+    border-collapse: collapse; 
+    margin-top: 06%;      
+}
+.cont{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin:auto;        
+    margin-top: 5px;  
+    
+}
+.Bienv{
+    margin-top: 100%;    
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse; 
+}
+.blac{
+    width: 100%;
+    height: 25px;
+    margin-top: 2px;
+    
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    margin:auto;        
+    margin-top: 40px;
+    background-color: #F0B27A;
+    
+}
+/* forma de botones de redes sociales*/
+.fa {
+    padding: 40px;
+    font-size: 90px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-size-adjust: 20;
+    border-radius: 10%;
+    margin-top: 10px;
+    
+  }
+  .fa-facebook {
+  /*  background: #3B5998;*/
+    color:#3B5998;
+    
+  }
+  .fa-twitter {
+   /* background: #55ACEE;*/
+    color:#55ACEE;
+  }
+  .fa-instagram{
+    /*  background:#f09433;*/   
+  
+     color: #d6249f;   
+   }
+  
+  .fa-youtube{
+      color:#CC181E;
+     
+  }
+ 
+.enmarcada{
+border:5px solid #F0B27A; /* ancho - tipo - color */
+padding:1px; /* distancia entre la img y el borde */
+margin:10px; /* distancia entre el borde y el contenido */
+width:20%; /* el ancho de la img */
+}
+.enmarcadaicon{
+    border:5px solid #F0B27A; /* ancho - tipo - color */
+    padding:1px; /* distancia entre la img y el borde */
+    margin:10px; /* distancia entre el borde y el contenido */
+  /*  width:20%; /* el ancho de la img */
+    }
+.borde{
+    border-radius: 175px 175px; 
+    border:5px solid #F0B27A;
+}
+.texto{
+    width: 220px;
+    height: 10px;
+    margin:auto; 
+}
+
+.cont tr:nth-child(even) {background:#ccc;}
+.cont td {padding:5px;}
+.cont hola{background-color: yellow}
+
+
+.contenedor{
+    margin-top: 50px;   
+}
+.contenido{   
+    margin: auto; 
+    margin-top: 20px;
+    width: 900px;
+    height: 590px;
+    
+}
+.rectoria{
+    margin-top: 10%;
+}
+td{
+    padding: 60px;
+}
+th{
+    padding: 25px;
+}
+thead{
+    background-color:  #F0B27A;
+    border-bottom: solid 5px;
+    color: white;
+}
+tr:nth-child(ev){
+    background-color: aqua;
+}
+.navbar-nav.navbar-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.blanco{
+    margin: 35px;
+    width: 20%;
+}
+/* menu cambio de color al pasar el mause*/
+.moopio, .moopio a{
+    background-color: #F0B27A;
+    height: 50px;
+    width: 50px;
+}
+.moopio a{
+    display:block;
+}
+.moopio a:hover {
+    background-color: rgb(97, 20, 212);
+    cursor:default;
+}
+
+

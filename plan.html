@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Plan de Estudio</title>
+
+    <script src="main.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="stylo.css">
+ <!--Link de boostrap-->
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+ integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+ crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+ integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+ crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+ crossorigin="anonymous"></script>
+
+  <!--botones de redes social boostrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+    <!--Descargar PSF-->
+    <script>
+        if (!Modernizr.adownload) {
+            var $link = $('a');
+
+            $link.each(function () {
+                var $download = $(this).attr('download');
+
+                if (typeof $download !== typeof undefined && $download !== false) {
+                    var $el = $('<div>').addClass('download-instruction').text('Right-click and select "Download Linked File"');
+                    $el.insertAfter($(this));
+                }
+
+            });
+        }
+    </script>
+    <!---------->
+    <!-- Comparar datos-->
+    <script type="text/javascript">
+        function comparar_textos() {
+            var texto_1 = document.forms[0].elements[0].value;
+            var texto_2 = document.forms[0].elements[1].value;
+            var tam_txt_1 = texto_1.length;
+            var tam_txt_2 = texto_2.length;
+            if (tam_txt_1 != tam_txt_2) {
+                alert('los datos introducidos no son coincidentes');
+            } else {
+                for (n = 0; n < tam_txt_1; n++) {
+                    if (texto_1.charAt(n) != texto_2.charAt(n)) {
+                        alert('las cadenas introducidas no son coincidentes');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #datos {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #datos tr:nth-child(even) {
+            background: #ccc;
+        }
+
+        #datos td {
+            padding: 5px;
+        }
+
+        .datos hola {
+            background-color: yellow
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery.fn.extend({
+            resaltar: function (busqueda, claseCSSbusqueda) {
+                var regex = new RegExp("(<[^>]*>)|(" + busqueda.replace(/([-.*+?^${}()|[\]\/\\])/g, "\\$1") + ')', 'ig');
+                var nuevoHtml = this.html(this.html().replace(regex, function (a, b, c) {
+                    return (a.charAt(0) == "<") ? a : "<span class=\"" + claseCSSbusqueda + "\">" + c + "</span>";
+                }));
+                return nuevoHtml;
+            }
+        });
+
+
+        function resaltarTexto() {
+            $("#datos").resaltar(cajaTexto.value, "resaltarTexto");
+        }
+    </script>
+    <style>
+        .resaltarTexto {
+            color: #F3AA04;
+            background-color: #FFFF96;
+        }
+    </style>
+
+   <!--Buscador de datos--> 
+   <script language="javascript">
+    function doSearch()
+    {
+        var tableReg = document.getElementById('datos');
+        var searchText = document.getElementById('searchTerm').value.toLowerCase();
+        var cellsOfRow="";
+        var found=false;
+        var compareWith="";
+
+        // Recorremos todas las filas con contenido de la tabla
+        for (var i = 1; i < tableReg.rows.length; i++)
+        {
+            cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+            found = false;
+            // Recorremos todas las celdas
+            for (var j = 0; j < cellsOfRow.length && !found; j++)
+            {
+                compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                // Buscamos el texto en el contenido de la celda
+                if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+                {
+                    found = true;
+                }
+            }
+            if(found)
+            {
+                tableReg.rows[i].style.display = '';
+            } else {
+                // si no ha encontrado ninguna coincidencia, esconde la
+                // fila de la tabla
+                tableReg.rows[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar navbar navbar-light navbar fixed-top" style="background-color:#F0B27A;">
+
+        <a class="navbar-brand" href="#">
+            <img src="logo.JPG" width="30" height="30" class="d-inline-block align-top" alt="">
+            Licenciatura en Educación Básica<br>
+            <p align="center"> UASD Recinto Santiago</p>
+        </a>
+        <a class="navbar-brand" href="#"></a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                      <li class="nav-item active"><strong>
+                        <a class="nav-link" href="ejemplo.html" style="color:black;">Inicio <span
+                                class="sr-only">(current)</span></a>
+                    </strong>
+                </li>
+                <li class="nav-item"><strong>
+                        <a class="nav-link" href="plan.html" style="color:black;">Plan de Estudio</a>
+                    </strong>
+                </li>
+                <li class="nav-item"><strong>
+                        <a class="nav-link" href="otros.html" style="color:black;">Autoridades</a>
+                    </strong>
+                </li>
+                <li class="nav-item"><strong>
+                        <a class="nav-link" href="contactos.html" style="color:black;">Contáctenos</a>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <section class="contenedor wrapper">
+        <div id="contenedor">
+            <div class="tabla">
+
+                <img src="images/uasd.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
+                <h5 align="left">UNIVERSIDAD AUTÓNOMA DE SANTO DOMINGO</h5>
+                <h5 align="left"> Facultad de Ciencias de la Educación</h5>
+                <h6 align="left">Escuela de Educación Infantil y Básica </h6>
+                <h6 align="left">Licenciatura en Educación Básica </h6>
+
+
+
+                <a href="C:\Users\Robert Tavares\Desktop\JavaScript\pagina web\pdf" target="black"
+                    download=" Plan de Estudio: 201420 EDBA"> Descargar </a>
+                <h6 align="right" style="color:blue;">Plan de Estudio: 201420 EDBA</h6>
+                <h6 align="right" style="color:blue;">24355 -EDBA</h6> <br>
+
+
+                
+                <form action="form-inline" style="text-align:right;">
+                   <!-- <input type="text" id="cajaTexto" placeholder="Recuerdas Palabras Acentuadas" size="60" />-->
+                   <!-- <input type="button" value="Busacar" onClick="resaltarTexto();" />-->
+                   <input id="searchTerm" type="text" placeholder="Deseas buscar una Asignatura" onkeyup="doSearch()" size="60" />
+                </form>
+
+                <table id="datos">
+                    <thead>
+
+                        <tr>
+                            <th>Clave</th>
+                            <th>Asignatura</th>
+                            <th>HT</th>
+                            <th>HP</th>
+                            <th>CR</th>
+                            <th>Prerrequisitos</th>
+                            <th>Equivalencias</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Primer Semestre</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BIO-0170</td>
+                        <td>Biología Básica</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td>BIO0180 / (BIO0180)</td>
+                        <td>BIO0110, BIO0140</td>
+                    </tr>
+                    <tr>
+                        <td>BIO-0180</td>
+                        <td>Laboratorio de Biología Básica</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td>01</td>
+                        <td>BIO0170 / (BIO0170)</td>
+                        <td>BIO0110, BIO0140</td>
+                    </tr>
+                    <tr>
+                        <td>FIL-0110</td>
+                        <td>Int A La Filosofía</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIS-0180</td>
+                        <td>Física Básica</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>FIS0200 / (FIS0200)</td>
+                        <td>FIS0140</td>
+                    </tr>
+                    <tr>
+                        <td>FIS-0200</td>
+                        <td>Laboratorio de Física Básica</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>FIS0180 / (FIS0180)</td>
+                        <td>FIS0140</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-0110</td>
+                        <td>Fund De His Social Dominicana</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>HIS1100</td>
+                    </tr>
+                    <tr>
+                        <td>LET-0110</td>
+                        <td>Lengua Española Básica I</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>LET0130, LET0150</td>
+                    </tr>
+                    <tr>
+                        <td>MAT-0140</td>
+                        <td>Matemática Básica</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>MAT0120, MAT0130, MAT0840</td>
+                    </tr>
+                    <tr>
+                        <td>OSI-0310</td>
+                        <td>Orient Institucional y Académ</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td></td>
+                        <td>DOP0100, DOP1000, OSI1000</td>
+                    </tr>
+                    <tr>
+                        <td>SOC-0100</td>
+                        <td>Introd A Las Ciencias Sociales</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>ICS0110, SOC0120</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>23</h6>
+                        </td>
+                        <td>
+                            <h6>06</h6>
+                        </td>
+                        <td>
+                            <h6>25</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Segundo Semestre</h6>
+                        </td>
+                    </tr>
+                    <td>EFI-0120</td>
+                    <td>Educación Física</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>02</td>
+                    <td></td>
+                    <td>ART0410, ART0420, ART0510, EFI1700, EFS0110, EFS0120, EXT0110, PED1700</td>
+                    </tr>
+                    <tr>
+                        <td>GEO-1210</td>
+                        <td>Geografía Física General</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LET-0120</td>
+                        <td>Lengua Española Básica II</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td>LET0110 / LET0130 LET0150</td>
+                        <td>LET0130, LET0160</td>
+                    </tr>
+                    <tr>
+                        <td>MAT-0150</td>
+                        <td>Mat Para El Nivel Básico I</td>
+                        <td>03</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>MAT0140</td>
+                    </tr>
+                    <tr>
+                        <td>MAT-0880</td>
+                        <td>Geometría</td>
+                        <td>03</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td>MAT0150</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PSI-1050</td>
+                        <td>Int A La Psicología</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>PED2500, PSI1000, PSI1010</td>
+                    </tr>
+                    <tr>
+                        <td>QUI-0140</td>
+                        <td>Química Básica</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>QUI0110, QUI0120, QUI1020</td>
+                    </tr>
+                    <tr>
+                        <td>TEG-1110</td>
+                        <td>Fundamentos de la Educación</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>PED1110, PED1130, TEG11300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>21</h6>
+                        </td>
+                        <td>
+                            <h6>11</h6>
+                        </td>
+                        <td>
+                            <h6>25</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Tercer Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>CRI-1110</td>
+                        <td>Int a la Educación Estética</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td></td>
+                        <td>ART1110</td>
+                    </tr>
+                    <tr>
+                        <td>FIB-2000</td>
+                        <td>Didáctica General</td>
+                        <td>03</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td>TEG1110</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GEO-2440</td>
+                        <td>Geo Fis E Histórica Isla Sd</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td>GEO1210</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>INF-1100</td>
+                        <td>Fundamentos De Informática</td>
+                        <td>03</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MAT-1300</td>
+                        <td>Algebra Elemental</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>MAT0150</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PSI-2250</td>
+                        <td>Psicología Evolutiva</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>MAT0150/
+                            PSI1050 PED2500/ PSI1000 PSI1010
+                        </td>
+                        <td>PSI2220, PSI2240</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>16</h6>
+                        </td>
+                        <td>
+                            <h6>07</h6>
+                        </td>
+                        <td>
+                            <h6>19</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Cuarto Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>BIT-2250</td>
+                        <td>Recur Didact y Tecnológicos</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>FIB2000 / INF1100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EST-1100</td>
+                        <td>Fundamento De Estadística</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>MAT0120 / MAT0140 MAT0830</td>
+                        <td>EST1110, EST1120, EST1140, EST1210, EST1220, EST1310, EST1320, EST2110, EST2210, EST2250
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FIB-3230</td>
+                        <td>Didact Expres Oral Escrit I</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-4230</td>
+                        <td>Didact de los Conjun Numéricos</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-5210</td>
+                        <td>Didact de la Bio y Pract Docen</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GEO-1400</td>
+                        <td>Geografía Americana</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>IDI-0110</td>
+                        <td>Inglés Elemental I</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>IDI0210, IDI1140</td>
+                    </tr>
+
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>17</h6>
+                        </td>
+                        <td>
+                            <h6>11</h6>
+                        </td>
+                        <td>
+                            <h6>22</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Quinto Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>FIB-3240</td>
+                        <td>Didact Expres Oral Escrit II</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-4240</td>
+                        <td>Didact Geometría y Pract Docen</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-5290</td>
+                        <td>Evaluación Educativa</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>FIB2000, EST1100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-6200</td>
+                        <td>Didact de la Qui para Edu Bas</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-6240</td>
+                        <td>Didact Física y Pract Docente</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-3230</td>
+                        <td>Teo Psicoped y Aplicaciones</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-2150</td>
+                        <td>Fil e His de la Educación Univ</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>TEG1110</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-3640</td>
+                        <td>Fund Y Estructura Curriculum</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>PED1110 / TEG1110 PED1130 / TEG1130</td>
+                        <td>PED3640</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>18</h6>
+                        </td>
+                        <td>
+                            <h6>12</h6>
+                        </td>
+                        <td>
+                            <h6>24</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Sexto Semestre</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FIB-3250</td>
+                        <td>Didact Historia y Pract Docent</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-5200</td>
+                        <td>Desarrollo Lógico Matemático</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>MAT0140</td>
+                        <td>PED5200</td>
+                    </tr>
+                    <tr>
+                        <td>FIB-ZZY0</td>
+                        <td>Asignaturas Optativas</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>06</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-4150</td>
+                        <td>Logopedia</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-3610</td>
+                        <td>Metodología Inv Educativa</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>PED1600, PED3610, PED4610, TEG1600, TEG4610</td>
+                    </tr>
+                    <tr>
+                        <td>TEG-4310</td>
+                        <td>Adm Y Legislación Escolar</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>TEG3140 / PED3140</td>
+                        <td>PED2310, PED3330, PED4310, TEG2310, TEG3330</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>12</h6>
+                        </td>
+                        <td>
+                            <h6>06</h6>
+                        </td>
+                        <td>
+                            <h6>21</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Septimo Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>FIB-1370</td>
+                        <td>Ped de las Art Visuales y Plas</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-2030</td>
+                        <td>Ped Musical Edu Inf Y Básica</td>
+                        <td>03</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td>PED1220 / PED0210 FIB1220 / PED6220 FIB6220</td>
+                        <td>PED2030</td>
+                    </tr>
+                    <tr>
+                        <td>FIB-4250</td>
+                        <td>Didact Algebra y Pract Docent</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-5270</td>
+                        <td>Didact Geografía y Pract Docen</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-ZZY0</td>
+                        <td>Asignaturas Optativas</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>06</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-2190</td>
+                        <td>Ética Profesional del Docente</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>12</h6>
+                        </td>
+                        <td>
+                            <h6>08</h6>
+                        </td>
+                        <td>
+                            <h6>22</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Octavo Semestre</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FIB-7000</td>
+                        <td>Prac Profes Superv para Básica</td>
+                        <td>00</td>
+                        <td>10</td>
+                        <td>05</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FIB-ZZY0</td>
+                        <td>Asignaturas Optativas</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>06</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LET-3490</td>
+                        <td>Literatura Infantil</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>LET0120 / LET0160 LET0130</td>
+                        <td>LET2350</td>
+                    </tr>
+                    <tr>
+                        <td>TEG-1180</td>
+                        <td>Higiene y Seguridad Escolar</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-4270</td>
+                        <td>Tec de Elab de Proyect Inv Edu</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>08</h6>
+                        </td>
+                        <td>
+                            <h6>12</h6>
+                        </td>
+                        <td>
+                            <h6>20</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+
+                        <td colspan="7" style="color:blue;">
+                            <h6>Tesis de Grado</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>FIB-6160</td>
+                        <td>Tesis de Grado o Curso Equival</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>08</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="color:red;">
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h6>00</h6>
+                        </td>
+                        <td>
+                            <h6>00</h6>
+                        </td>
+                        <td>
+                            <h6>08</h6>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style=" background-color: rgb(179, 179, 247);"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" style="color:black; background-color:white;">
+                            <h4>OPTATIVAS </h4>
+                        </td>
+                    </tr>
+                    <thead>
+
+                        <tr>
+                            <th>Clave</th>
+                            <th>Asignatura</th>
+                            <th>HT</th>
+                            <th>HP</th>
+                            <th>CR</th>
+                            <th>Prerrequisitos</th>
+                            <th>Equivalencias</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Sexto Semestre</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BIO-2420</td>
+                        <td>Ecología General</td>
+                        <td>03</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>BIO2430, BIO2450</td>
+                    </tr>
+                    <tr>
+                        <td>CFI-3190</td>
+                        <td>Desarr Fisiológico y Educaciónl</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ECN-2110</td>
+                        <td>Introducción A La Economía</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>ECN1120, ECN1150, ECN2100</td>
+                    </tr>
+                    <tr>
+                        <td>FIB-2360</td>
+                        <td>Pedagogía Artes Escénicas</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GEO-1160</td>
+                        <td>Climatología I</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GEO-1600</td>
+                        <td>Cartografía</td>
+                        <td>02</td>
+                        <td>06</td>
+                        <td>04</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GEO-2410</td>
+                        <td>Geografía Humana</td>
+                        <td>03</td>
+                        <td>01</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>GEO2420</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1130</td>
+                        <td>Historia Dominicana I</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>HIS1120, HIS2110</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1140</td>
+                        <td>Historia Dominicana II</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>HIS1120 / HIS1130</td>
+                        <td>HIS2120</td>
+                    </tr>
+
+                    <tr>
+                        <td>HIS-1150</td>
+                        <td>Prehistoria De Santo Domingo</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>HIS2530</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Séptimo Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HIS-1210</td>
+                        <td>Historia De América I</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>HIS2210</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1220</td>
+                        <td>Historia De América II</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>HIS2220</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1390</td>
+                        <td>Historia De La Cultura Univers</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1510</td>
+                        <td>Int A La Antropología</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>PED3400</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1610</td>
+                        <td>His Civilización I Antigua</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>HIS1310, HIS1370</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-1620</td>
+                        <td>His Civilización II Media</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>HIS1320, HIS1380</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-2130</td>
+                        <td>Historia Dominicana III</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>HIS3110</td>
+                    </tr>
+                    <tr>
+                        <td>HIS-3440</td>
+                        <td>His Del Pensamiento Científico</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>HIS3110</td>
+                    </tr>
+                    <tr>
+                        <td>IDI-0120</td>
+                        <td>Inglés Elemental II</td>
+                        <td>04</td>
+                        <td>00</td>
+                        <td>04</td>
+                        <td></td>
+                        <td>IDI0220</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" style="color:blue;">
+                            <h6>Octavo Semestre</h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>LET-2240</td>
+                        <td>Redacción Y Estilo</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td>LET2270</td>
+                    </tr>
+
+                    <tr>
+                        <td>OSI-1320</td>
+                        <td>Estrat Desarrollo Pensamiento</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>OSI-1400</td>
+                        <td>Int a la Orientación</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-2580</td>
+                        <td>Educación Y Población</td>
+                        <td>03</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>TEG1110 / PED1110 TEG3120 / PED3120</td>
+                        <td>PED2580, PED3170, TEG3170</td>
+                    </tr>
+                    <tr>
+                        <td>OSI-3250</td>
+                        <td>Educ para la Atención Diversid</td>
+                        <td>02</td>
+                        <td>00</td>
+                        <td>02</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-4100</td>
+                        <td>Orient Comunit y Prac Extracur</td>
+                        <td>02</td>
+                        <td>04</td>
+                        <td>04</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-4130</td>
+                        <td>Pedagogía Afectivo-Sexual</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSI-4140</td>
+                        <td>Relaciones Human en Educación</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PSI-3250</td>
+                        <td>Psicología Diferencial</td>
+                        <td>02</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TEG-4110</td>
+                        <td>Pedagogía Social</td>
+                        <td>03</td>
+                        <td>00</td>
+                        <td>03</td>
+                        <td>TEG3140 / PED3140</td>
+                        <td>PED4110</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                </table>
+                <di>
+                    <h5>Total HT : 127 </h5>
+                </di>
+                <di>
+                    <h5>Total HP : 73 </h5>
+                </di>
+                <di>
+                    <h5>Total Créditos : 190 </h5>
+                </di>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div id="footer">
+            <footer align="center">
+                <a  align="center" href="https://www.facebook.com/universidadUASD/" target="black"  class="fa fa-facebook texto"> facebook</a>
+                <a  align="center" href="https://twitter.com/universidaduasd?lang=es" target="black" class="fa fa-twitter texto">twitter</a>
+                <a  align="center" href="https://www.instagram.com/universidaduasd/?hl=es-la" target="black" class="fa fa-instagram texto"> Instagram</a>
+                <a  align="center" href="https://www.youtube.com/user/uasdtv" target="black" class="fa fa-youtube texto"> Youtube</a>
+            </footer>
+        </div>
+    </section>
+
+</body>
+
+</html>
