@@ -106,13 +106,13 @@ header nav a:hover{
 }
 .centroop{
     width: 300px;
-    height: 223px;    
+    height: 350px;    
     float: left;    
     
 }
 .derechaop{
     width: 300px;
-    height: 223px;    
+    height: 230px;    
     float: left; 
       
 }
@@ -192,11 +192,19 @@ input {
 }
 
 .footer{
+    /*
     width: 100%;
     height: 100%;
     margin:auto;        
     margin-top: 40px;
-    background-color: #F0B27A;
+    background-color: #F0B27A;*/
+
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:65px;
+   width:100%;
+   background:#F0B27A;
     
 }
 /* forma de botones de redes sociales*/
@@ -261,11 +269,15 @@ width:20%; /* el ancho de la img */
 .contenedor{
     margin-top: 50px;   
 }
-.contenido{   
+.contenido{
+    border:3px solid #F0B27A; 
+   /* border-radius: 175px 175px; */
+   border-radius: 100px 100px;
+     
     margin: auto; 
     margin-top: 20px;
     width: 900px;
-    height: 590px;
+    height: 550px;
     
 }
 .rectoria{
